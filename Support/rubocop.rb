@@ -13,7 +13,7 @@ def log(msg)
   logger.info msg
 end
 
-def offences(file)
+def offences(file, RUBY_VERSION.to_f)
   processed_source = RuboCop::ProcessedSource.from_file(file)
   team = RuboCop::Cop::Team.new(
     RuboCop::Cop::Cop.all,
